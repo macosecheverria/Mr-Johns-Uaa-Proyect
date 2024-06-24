@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="-mx-4 flex flex-col items-center">
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
               <div className="mb-12 max-w-[360px] lg:mb-16">
-                <Link href="/" className="mb-8 inline-block">
+                {/* <Link href="/" className="mb-8 inline-block">
                   <Image
                     src="images/logo/Logo-Mr-Johs.svg"
                     alt="logo"
@@ -27,11 +27,11 @@ const Footer = () => {
                     width={60}
                     height={20}
                   />
-                </Link>
+                </Link> */}
                 <p className="mb-9 text-base font-medium leading-relaxed text-body-color">
                   Seguinos en nuestras redes sociales
                 </p>
-                <div className="flex items-center">
+                {/* <div className="flex items-center">
                   <a
                     href="/"
                     aria-label="social-link"
@@ -62,7 +62,7 @@ const Footer = () => {
                   </a>
                   
                  
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -71,7 +71,7 @@ const Footer = () => {
         <div className="bg-primary/10 py-8">
           <div className="container">
             <p className="text-center text-base text-body-color dark:text-white">
-              Hecho por estudiantes de la Universidad  Autonoma de Asunción en el framework Next.js 
+              &reg; 2024 Mr Johns S.A.  - Todos los derechos reservados. 
             </p>
           </div>
         </div>

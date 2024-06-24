@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <style>
+        [carrousel] {
+            display: flex;
+            position: relative;
+            background-color: #c51212;
+            border-radius: 10px;
+            min-height: 50vh;
+        }
+
+        [carrousel]::before {
+            content: '';
+            display: block;
+            padding-bottom: 50%;
+        }
+
+        [name~="carrousel"] {
+            display: none;
+        }
+
+        [name~="carrousel"]:checked + .slide {
+            pointer-events: auto;
+            opacity: 1;
+        }
+
+        [name~="carrousel"]:checked + .slide .slide-content {
+            opacity: 1;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-content {
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .slide-content img {
+            width: 100%;
+            height: auto;
+            /* max-width: 100%;
+            max-height: 100%; */
+            /* object-fit: cover; */
+            border-radius: 10px;
+        }
+
+        .back,
+        .forward {
+            display: block;
+            position: absolute;
+            top: calc(50% - 2rem);
+            height: 4rem;
+            width: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+            font-size: .5rem;
+            background-color: #79d292;
+            border-radius: 100px;
+            color: #2e6f3d;
+            box-shadow: 0 2px 0 0 rgba(0, 0, 0, .1);
+            transform: scale(.9);
+            transition: transform .2s;
+        }
+
+        .back:hover,
+        .forward:hover {
+            transform: scale(1);
+            background-color: white;
+        }
+
+        .back {
+            left: calc(0% + 1rem);
+        }
+
+        .forward {
+            right: calc(0% + 1rem);
+        }
+
+        body {
+            padding: 1rem;
+        }
+
+        [carrousel] h1 {
+            font-size: 5rem;
+            color: white;
+            text-shadow: 0 3px 0 rgba(0, 0, 0, .2);
+        }
+    </style>
+</head>
+
+<body>
+    <section carrousel>
+        <input id="slide-0" name="carrousel" type="radio" checked/>
+        <div class="slide">
+            <label for="slide-8" class="back">◀</label>
+            <div class="slide-content">
+                <img src="Sabores/4quesos.jpg" alt="4quesos">
+                <header>
+                    <nav>
+                        <ul>
+                            <li><a href="#"><span class="dos"><i class="icon fa-solid fa-bars"></i></span>Detalles</a>
+                                <ul>
+                                    <li>Prepizzas hechas artesanalmente, salsa de tomate, queso mozzarella, katupyry, queso roquefort, oregano y un toque de esencia de ajo.</li>
+                                    <li>Precio: 60.000 Gs</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <label for="slide-1" class="forward">▶</label>
+        </div>
+
+        <input id="slide-1" name="carrousel" type="radio" />
+        <div class="slide">
+            <label for="slide-0" class="back">◀</label>
+            <div class="slide-content">
+                <img src="Sabores/chesseburger.jpg" alt="chesseburger">
+                <header>
+                    <nav>
+                        <ul>
+                            <li><a href="#"><span class="dos"><i class="icon fa-solid fa-bars"></i></span>Detalles</a>
+                                <ul>
+                                    <li>Prepizzas hechas artesanalmente, salsa de tomate, queso mozzarella, trocitos de hamburguesa, queso cheddar, oregano y un toque de esencia de ajo.</li>
+                                    <li>Precio: 65.000 Gs</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <label for="slide-2" class="forward">▶</label>
+        </div>
+
+        <input id="slide-2" name="carrousel" type="radio" />
+        <div class="slide">
+            <label for="slide-1" class="back">◀</label>
+            <div class="slide-content">
+                <img src="Sabores/chocloylocote.jpg" alt="chocloylocote">
+                <header>
+                    <nav>
+                        <ul>
+                            <li><a href="#"><span class="dos"><i class="icon fa-solid fa-bars"></i></span>Detalles</a>
+                                <ul>
+                                    <li>Prepizzas hechas artesanalmente, salsa de tomate, queso mozzarella, choclo, morrones, katupyry, oregano y un toque de esencia de ajo.</li>
+                                    <li>Precio: 55.000 Gs</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <label for="slide-3" class="forward">▶</label>
+        </div>
+
+        <input id="slide-3" name="carrousel" type="radio" />
+        <div class="slide">
+            <label for="slide-2" class="back">◀</label>
+            <div class="slide-content">
+                <img src="Sabores/margaret.jpg" alt="margaret">
+                <header>
+                    <nav>
+                        <ul>
+                            <li><a href="#"><span class="dos"><i class="icon fa-solid fa-bars"></i></span>Detalles</a>
+                                <ul>
+                                    <li>Prepizzas hechas artesanalmente, salsa de tomate, queso mozzarella, tomate en rodajas, albahaca, oregano y un toque de esencia de ajo.</li>
+                                    <li>Precio: 55.000 Gs</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <label for="slide-4" class="forward">▶</label>
+        </div>
+
+        <input id="slide-4" name="carrousel" type="radio" />
+        <div class="slide">
+            <label for="slide-3" class="back">◀</label>
+            <div class="slide-content">
+                <img src="Sabores/mexicana.jpg" alt="mexicana">
+                <header>
+                    <nav>
+                        <ul>
+                            <li><a href="#"><span class="dos"><i class="icon fa-solid fa-bars"></i></span>Detalles</a>
+                                <ul>
+                                    <li>Prepizzas hechas artesanalmente, salsa de tomate, queso mozzarella, chorizo picante en rodajas, cebollas, morrones, aji natural, oregano y un toque de esencia de ajo.</li>
+                                    <li>Precio: 65.000 Gs</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <label for="slide-5" class="forward">▶</label>
+        </div>
+
+        <input id="slide-5" name="carrousel" type="radio" />
+        <div class="slide">
+            <label for="slide-4" class="back">◀</label>
+            <div class="slide-content">
+                <img src="Sabores/mozzarella.jpg" alt="mozzarella">
+                <header>
+                    <nav>
+                        <ul>
+                            <li><a href="#"><span class="dos"><i class="icon fa-solid fa-bars"></i></span>Detalles</a>
+                                <ul>
+                                    <li>Prepizzas hechas artesanalmente, salsa de tomate, queso mozzarella, oregano y un toque de esencia de ajo.</li>
+                                    <li>Precio: 45.000 Gs</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <label for="slide-6" class="forward">▶</label>
+        </div>
+
+        <input id="slide-6" name="carrousel" type="radio" />
+        <div class="slide">
+            <label for="slide-5" class="back">◀</label>
+            <div class="slide-content">
+                <img src="Sabores/palmito.jpg" alt="palmito">
+                <header>
+                    <nav>
+                        <ul>
+                            <li><a href="#"><span class="dos"><i class="icon fa-solid fa-bars"></i></span>Detalles</a>
+                                <ul>
+                                    <li>Prepizzas hechas artesanalmente, salsa de tomate, queso mozzarella, palmito picado, aceitunas negras cortadas en rodajas, oregano y un toque de esencia de ajo.</li>
+                                    <li>Precio: 55.000 Gs</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <label for="slide-7" class="forward">▶</label>
+        </div>
+
+        <input id="slide-7" name="carrousel" type="radio" />
+        <div class="slide">
+            <label for="slide-6" class="back">◀</label>
+            <div class="slide-content">
+                <img src="Sabores/peperoni.jpg" alt="peperoni">
+                <header>
+                    <nav>
+                        <ul>
+                            <li><a href="#"><span class="dos"><i class="icon fa-solid fa-bars"></i></span>Detalles</a>
+                                <ul>
+                                    <li>Prepizzas hechas artesanalmente, salsa de tomate, queso mozzarella, peperoni, oregano y un toque de esencia de ajo.</li>
+                                    <li>Precio: 65.000 Gs</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <label for="slide-8" class="forward">▶</label>
+        </div>
+
+        <input id="slide-8" name="carrousel" type="radio" />
+        <div class="slide">
+            <label for="slide-7" class="back">◀</label>
+            <div class="slide-content">
+                <img src="Sabores/primavera.jpg" alt="primavera">
+                <header>
+                    <nav>
+                        <ul>
+                            <li><a href="#"><span class="dos"><i class="icon fa-solid fa-bars"></i></span>Detalles</a>
+                                <ul>
+                                    <li>Prepizzas hechas artesanalmente, salsa de tomate, queso mozzarella, aceitunas verdes, aceitunas negras, choclo, morrones, queso parmesano, oregano y un toque de esencia de ajo.</li>
+                                    <li>Precio: 55.000 Gs</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <label for="slide-0" class="forward">▶</label>
+        </div>
+
+    </section>
+</body>
+
+</html>

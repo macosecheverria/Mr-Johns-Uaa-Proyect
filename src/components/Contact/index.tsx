@@ -11,10 +11,10 @@ const Contact = () => {
               "
             >
               <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
-                Nesecita Ayuda?
+                Déjanos un mensaje
               </h2>
               <p className="mb-12 text-base font-medium text-body-color">
-                Envianos un mensaje por correo para asi cominicarnos con usted
+                Déjanos un mensaje, te contestaremos en la brevedad posible.
               </p>
               <form>
                 <div className="-mx-4 flex flex-wrap">
@@ -39,7 +39,7 @@ const Contact = () => {
                         htmlFor="email"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        Correo
+                        E-mail
                       </label>
                       <input
                         type="email"
